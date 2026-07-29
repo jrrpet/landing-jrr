@@ -95,6 +95,56 @@ hr {
   50% { opacity: 0; }
 }
 
+/* ---- terminal interactivo de contacto ---- */
+.terminal-line {
+  margin: 0.5rem 0;
+}
+
+.terminal-choice {
+  background: #000;
+  color: #fff;
+  border: 1px solid #777;
+  font-family: inherit;
+  font-size: 0.92rem;
+  padding: 0.25rem 0.6rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.terminal-choice:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.terminal-form label {
+  display: block;
+  margin: 0.6rem 0;
+}
+
+.terminal-form input,
+.terminal-form textarea {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #777;
+  font-family: inherit;
+  font-size: 0.92rem;
+  width: 100%;
+  padding: 0.2rem 0;
+  margin-top: 0.2rem;
+  outline: none;
+}
+
+.terminal-form input:focus,
+.terminal-form textarea:focus {
+  border-bottom-color: #fff;
+}
+
+.terminal-form textarea {
+  resize: vertical;
+}
+
 /* ---- secciones ---- */
 section {
   margin: 1.75rem 0;
