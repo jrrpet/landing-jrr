@@ -10,35 +10,56 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
-      background: #fff;
+      background: #333;
       font-family: "Courier New", Courier, monospace;
     }
-    table { border-collapse: collapse; }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .monitor {
+      width: 96vw;
+      max-width: 1280px;
+      height: 92vh;
+      background: #000;
+      border: 28px solid #222;
+      border-radius: 4px;
+      box-shadow: 0 0 0 6px #111, 0 0 40px rgba(0,0,0,0.6);
+      overflow: hidden;
+    }
+    .screen {
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
   </style>
 </head>
 <body>
 
-<table width="100%" height="100%" border="1" cellspacing="0" cellpadding="0">
-  <tr>
-    <td colspan="2" height="90">
-      <iframe src="top.html" name="top" width="100%" height="100%" frameborder="0"></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td width="160">
-      <iframe src="menu.html" name="menu" width="100%" height="100%" frameborder="0"></iframe>
-    </td>
-    <td>
-      <iframe src="home.html" name="main" width="100%" height="100%" frameborder="0"></iframe>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" height="28">
-      <iframe src="footer.html" name="footer" width="100%" height="100%" frameborder="0"></iframe>
-    </td>
-  </tr>
-</table>
+<div class="monitor">
+  <table class="screen" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td colspan="2" height="110">
+        <iframe src="top.html" name="top" width="100%" height="100%" frameborder="0"></iframe>
+      </td>
+    </tr>
+    <tr>
+      <td width="200">
+        <iframe src="menu.html" name="menu" width="100%" height="100%" frameborder="0"></iframe>
+      </td>
+      <td>
+        <iframe src="home.html" name="main" width="100%" height="100%" frameborder="0"></iframe>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" height="36">
+        <iframe src="footer.html" name="footer" width="100%" height="100%" frameborder="0"></iframe>
+      </td>
+    </tr>
+  </table>
+</div>
 
 </body>
 </html>
