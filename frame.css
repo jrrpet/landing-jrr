@@ -78,8 +78,10 @@ blockquote {
 }
 
 .icon {
-  width: 14px;
-  height: 14px;
+  width: 1em;
+  height: 1em;
   vertical-align: middle;
-  margin-right: 4px;
+  margin-right: 0.3em;
+  position: relative;
+  top: -0.05em;
 }
