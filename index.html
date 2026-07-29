@@ -3,51 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Javier R.</title>
-  <meta name="description" content="Landing personal de Javier R.">
+  <title>jrr — Javier Rodríguez Ruiz</title>
+  <meta name="description" content="Javier Rodríguez Ruiz — ingeniero, inventor, usuario Debian desde octavo básico. Fundador de PETCiclo. Santiago de Chile.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>Javier R.</h1>
-    <p><!-- TODO: tagline --></p>
-  </header>
+<div class="page">
 
-  <main>
+  <!-- ============ NAV estilo 2000s ============ -->
+  <nav class="nav">
+    <span class="nav-title">jrr.petciclo.cl</span>
+    [ <a href="#sobre-mi">sobre mí</a> ]
+    [ <a href="#proyectos">proyectos</a> ]
+    [ <a href="#trayectoria">trayectoria</a> ]
+    [ <a href="#contacto">contacto</a> ]
+  </nav>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p><!-- TODO: bio --></p>
-    </section>
+  <hr>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <ul>
-        <li>
-          <h3><!-- TODO: proyecto 1 --></h3>
-          <p><!-- TODO: descripción --></p>
-        </li>
-        <li>
-          <h3><!-- TODO: proyecto 2 --></h3>
-          <p><!-- TODO: descripción --></p>
-        </li>
-      </ul>
-    </section>
+  <!-- ============ TERMINAL ============ -->
+  <div class="terminal">
+    <div class="terminal-bar">jrr@debian: ~</div>
+    <div class="terminal-body">
+      <p><span class="prompt">jrr@debian:~$</span> whoami</p>
+      <p>Javier Rodríguez Ruiz — ingeniero, inventor.</p>
+      <p>&nbsp;</p>
+      <p><span class="prompt">jrr@debian:~$</span> uname -a</p>
+      <p>Debian GNU/Linux — usuario desde octavo básico. Escuela Debian: si se puede hacer por terminal, se hace por terminal.</p>
+      <p>&nbsp;</p>
+      <p><span class="prompt">jrr@debian:~$</span> cat mision.txt</p>
+      <p>Acelerar la transición de una economía lineal a una circular a través de la educación, la tecnología y la innovación.</p>
+      <p>&nbsp;</p>
+      <p><span class="prompt">jrr@debian:~$</span> ./estado_actual.sh</p>
+      <p>Fundador de <a href="https://petciclo.cl">PETCiclo</a> — transformamos residuos PET en filamento de impresión 3D con trazabilidad social. Santiago de Chile.<span class="cursor">▊</span></p>
+    </div>
+  </div>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <ul>
-        <li><a href="mailto:javier@petciclo.cl">javier@petciclo.cl</a></li>
-        <!-- TODO: LinkedIn, GitHub, etc. -->
-      </ul>
-    </section>
+  <!-- ============ SOBRE MÍ ============ -->
+  <section id="sobre-mi">
+    <h2>## sobre mí</h2>
+    <p>
+      Apasionado por la tecnología y su integración en soluciones innovadoras, con un
+      espíritu inventor que me impulsa a explorar nuevas fronteras.
+    </p>
+    <p>
+      Ingeniero Civil en Informática con casi dos décadas de experiencia en las principales
+      empresas de telecomunicaciones de Chile, especializado en telecomunicaciones y
+      transformación digital, en proyectos de alta complejidad junto a equipos
+      multidisciplinarios.
+    </p>
+    <p>
+      En esta nueva etapa decidí emprender desafíos que alineen mis valores con mi pasión
+      por la innovación. Así nace <strong>PETCiclo</strong>, la empresa que fundé para acelerar
+      la transición de un modelo de consumo lineal hacia uno circular y sostenible.
+    </p>
+    <blockquote>
+      "Siguiendo el ejemplo de la máquina de coser Singer, PETMachine empodera a las
+      comunidades para participar activamente en la economía circular."
+    </blockquote>
+  </section>
 
-  </main>
+  <hr>
 
-  <footer>
-    <p>© Javier R.</p>
+  <!-- ============ PROYECTOS ============ -->
+  <section id="proyectos">
+    <h2>## proyectos e inventos</h2>
+
+    <table class="tabla">
+      <tr>
+        <th>proyecto</th>
+        <th>qué es</th>
+      </tr>
+      <tr>
+        <td><a href="https://petciclo.cl">PETCiclo</a></td>
+        <td>Empresa de economía circular: filamento rPET con trazabilidad social. Cada bobina de 900 g transforma ~35 botellones en material útil.</td>
+      </tr>
+      <tr>
+        <td>PETMachine+ / PETWelder</td>
+        <td>Maquinaria propia (CAD → puesta en marcha) para convertir residuos plásticos en insumos de impresión 3D. Controladores PID, electrónica IoT, hardware open-source.</td>
+      </tr>
+      <tr>
+        <td>Conciencia Antártica</td>
+        <td>Obra impresa en 3D con rPET, encargada por el Congreso Nacional a la BCN junto al artista Sebastián Riffo. Revalorizó más de 10.000 botellas.</td>
+      </tr>
+      <tr>
+        <td>Sistema de Trazabilidad</td>
+        <td>Plataforma en producción (React/Supabase): cada bobina lleva un QR con su historia completa. Principio: "todo lleva código; lo que no tiene código no se procesa".</td>
+      </tr>
+      <tr>
+        <td>Sistemas internos</td>
+        <td>Gestión JxR (reinserción social), Sistema Comercial, RAG-CicloLex (monitoreo legislativo), RAG-Adjudica (licitaciones), scraping de datos.</td>
+      </tr>
+      <tr>
+        <td>Parlante portátil</td>
+        <td>Diseño CAD paramétrico en CadQuery (Python). Más de 60 iteraciones versionadas de cámara acústica, membrana y tornillería.</td>
+      </tr>
+      <tr>
+        <td>Cabina Movizzon</td>
+        <td>Cabina automatizada de captura de documentos: piezas impresas en 3D, firmware Arduino (NEMA 17, homing), scripts Python.</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- ============ TRAYECTORIA ============ -->
+  <section id="trayectoria">
+    <h2>## trayectoria</h2>
+
+    <table class="tabla">
+      <tr>
+        <th>periodo</th>
+        <th>cargo</th>
+        <th>empresa</th>
+      </tr>
+      <tr><td>2024 — hoy</td><td>Fundador / Director</td><td>PETCiclo SpA</td></tr>
+      <tr><td>2019 — 2024</td><td>Arquitecto de Soluciones Empresariales</td><td>ENTEL</td></tr>
+      <tr><td>2013 — 2019</td><td>Jefe de Proyectos</td><td>ENTEL</td></tr>
+      <tr><td>2010 — 2013</td><td>Jefe de Proyectos Informáticos</td><td>VTR</td></tr>
+      <tr><td>2006 — 2010</td><td>Analista de Sistemas</td><td>Telefónica del Sur</td></tr>
+    </table>
+
+    <h3>### formación</h3>
+    <ul>
+      <li>Ingeniero Civil en Informática — INACAP (2010)</li>
+      <li>Magíster en Ciencias del Diseño — Universidad Adolfo Ibáñez (2023)</li>
+      <li>Diplomado en Aprendizaje Maker con enfoque STEAM — UDD (2024)</li>
+      <li>5 certificaciones TM Forum: Open API, SID, TAM, eTOM, Open Digital Framework (2023)</li>
+    </ul>
+
+    <h3>### habilidades</h3>
+    <p class="skills">
+      linux / debian · python · cadquery (cad paramétrico) · impresión 3d / cnc ·
+      arduino / iot · react / next.js · supabase / firebase / postgresql ·
+      telecomunicaciones · arquitectura de soluciones · gestión de proyectos
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto">
+    <h2>## contacto</h2>
+    <table class="tabla tabla-contacto">
+      <tr><td>email</td><td><a href="mailto:javier@petciclo.cl">javier@petciclo.cl</a></td></tr>
+      <tr><td>whatsapp</td><td><a href="https://wa.me/56963402024">+56 9 6340 2024</a></td></tr>
+      <tr><td>github</td><td><a href="https://github.com/jrrpet">github.com/jrrpet</a></td></tr>
+      <tr><td>empresa</td><td><a href="https://petciclo.cl">petciclo.cl</a></td></tr>
+      <tr><td>ubicación</td><td>Santiago de Chile</td></tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <footer class="footer">
+    <p>© 2026 Javier Rodríguez Ruiz — hecho a mano en HTML, como en los viejos tiempos.</p>
+    <p><span class="prompt-footer">jrr@debian:~$</span> exit <span class="cursor">▊</span></p>
   </footer>
+
+</div>
 
 </body>
 </html>
