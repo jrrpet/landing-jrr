@@ -4,6 +4,7 @@ Generador del sitio plano para jrr.petciclo.cl.
 Lee los fragmentos HTML de origen y produce dist/index.html (HTML simple, sin iframes).
 """
 import re
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -20,8 +21,8 @@ def body_content(path: Path) -> str:
 
 
 def clean_for_dist(html: str) -> str:
-    # Quita scripts de edición y zoom del HTML final
-    html = re.sub(r'<script[^>]*src="(?:edit|zoom)\.js"[^>]*>\s*</script>\s*', "", html)
+    # Quita scripts de edición, zoom y CMS del HTML final
+    html = re.sub(r'<script[^>]*src="(?:edit|editor2|zoom)\.js"[^>]*>\s*</script>\s*', "", html)
     # Quita el outline de modo edición si quedara
     html = re.sub(r'\s*style="outline:[^"]*"', "", html)
     return html
@@ -194,10 +195,20 @@ hr {
 }
 """
 
+    # Copia assets públicos
+    public_src = ROOT / "public"
+    public_dst = DIST / "public"
+    if public_src.exists():
+        if public_dst.exists():
+            shutil.rmtree(public_dst)
+        shutil.copytree(public_src, public_dst)
+
     (DIST / "index.html").write_text(dist_html, encoding="utf-8")
     (DIST / "styles.css").write_text(dist_css, encoding="utf-8")
     print(f"Generado: {DIST}/index.html")
     print(f"Generado: {DIST}/styles.css")
+    if public_dst.exists():
+        print(f"Copiado: {public_dst}")
 
 
 if __name__ == "__main__":
