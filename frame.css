@@ -76,3 +76,10 @@ blockquote {
 .center {
   text-align: center;
 }
+
+.icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
