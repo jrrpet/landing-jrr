@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  padding: 14px;
+  padding: 12px;
   background: #fff;
   color: #000;
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
-  line-height: 1.45;
+  line-height: 1.4;
   overflow: hidden;
 }
 
@@ -21,23 +21,23 @@ a:hover {
 
 h1 {
   font-size: 22px;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 h2 {
   font-size: 17px;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   border-bottom: 1px solid #000;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 h3 {
   font-size: 15px;
-  margin: 12px 0 8px;
+  margin: 8px 0 4px;
 }
 
 p {
-  margin: 0 0 10px;
+  margin: 0 0 6px;
 }
 
 ul {
@@ -46,18 +46,18 @@ ul {
 }
 
 li {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 th, td {
   border: 1px solid #000;
-  padding: 4px 6px;
+  padding: 3px 5px;
   text-align: left;
   vertical-align: top;
 }
@@ -68,7 +68,7 @@ th {
 
 blockquote {
   border-left: 2px solid #000;
-  margin: 10px 0;
+  margin: 8px 0;
   padding-left: 10px;
   color: #333;
 }
