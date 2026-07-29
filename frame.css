@@ -6,7 +6,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 15px;
   line-height: 1.4;
-  overflow: hidden;
+  overflow: auto;
 }
 
 a {
