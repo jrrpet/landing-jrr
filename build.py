@@ -35,9 +35,11 @@ def build():
     sections = [
         ("inicio", clean_for_dist(body_content(ROOT / "home.html"))),
         ("sobre mí", clean_for_dist(body_content(ROOT / "bio.html"))),
-        ("proyectos", clean_for_dist(body_content(ROOT / "proyectos.html"))),
-        ("trayectoria", clean_for_dist(body_content(ROOT / "trayectoria.html"))),
-        ("contacto", clean_for_dist(body_content(ROOT / "contacto.html"))),
+        ("currículum", clean_for_dist(body_content(ROOT / "curriculum.html"))),
+        ("blog", clean_for_dist(body_content(ROOT / "blog.html"))),
+        ("tools", clean_for_dist(body_content(ROOT / "tools.html"))),
+        ("newsletter", clean_for_dist(body_content(ROOT / "newsletter.html"))),
+        ("contactos", clean_for_dist(body_content(ROOT / "contacto.html"))),
     ]
 
     main_parts = []
