@@ -14,11 +14,48 @@
     <li><a href="trayectoria.html" target="main">> trayectoria</a></li>
     <li><a href="contacto.html" target="main">> contacto</a></li>
   </ul>
+
   <hr style="border:none; border-top:1px solid #000; margin:12px 0;">
+
   <p style="font-size:11px; color:#333;">
     externo:<br>
     <a href="https://petciclo.cl" target="_blank">petciclo.cl</a><br>
     <a href="https://github.com/jrrpet" target="_blank">github</a>
   </p>
+
+  <hr style="border:none; border-top:1px solid #000; margin:12px 0;">
+
+  <p style="font-size:11px;">
+    tamaño texto:<br>
+    <a href="#" onclick="setSize(0); return false;">[ A ]</a>
+    <a href="#" onclick="setSize(1); return false;">[ A+ ]</a>
+    <a href="#" onclick="setSize(2); return false;">[ A++ ]</a>
+  </p>
+
+  <script>
+    (function () {
+      const sizes = ['13px', '15px', '17px'];
+      let idx = 0;
+
+      function apply() {
+        const main = window.parent.frames['main'];
+        if (main && main.document && main.document.body) {
+          main.document.body.style.fontSize = sizes[idx];
+          main.document.body.style.lineHeight = '1.45';
+        }
+      }
+
+      const mainFrame = window.parent.frames['main'];
+      if (mainFrame) {
+        if (mainFrame.document.readyState === 'complete') apply();
+        mainFrame.addEventListener('load', apply);
+      }
+
+      window.setSize = function (n) {
+        idx = n;
+        apply();
+      };
+    })();
+  </script>
 </body>
 </html>
