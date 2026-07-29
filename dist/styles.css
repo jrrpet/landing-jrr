@@ -1,0 +1,113 @@
+/* jrr.petciclo.cl — versión plana generada */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #333;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #000;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  grid-template-rows: 96px 1fr 30px;
+  grid-template-areas:
+    "header header"
+    "nav main"
+    "footer footer";
+}
+
+.site-header {
+  grid-area: header;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.site-header a { color: #fff; }
+.site-header a:hover { background: #fff; color: #000; }
+
+.site-nav {
+  grid-area: nav;
+  background: #fff;
+  border-right: 1px solid #000;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.site-main {
+  grid-area: main;
+  background: #fff;
+  padding: 12px;
+  overflow: auto;
+}
+
+.site-footer {
+  grid-area: footer;
+  background: #ccc;
+  border-top: 1px solid #000;
+  overflow: hidden;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #000;
+  color: #fff;
+}
+
+h1 { font-size: 22px; margin: 0 0 8px; }
+h2 { font-size: 17px; margin: 0 0 8px; border-bottom: 1px solid #000; padding-bottom: 3px; }
+h3 { font-size: 15px; margin: 8px 0 4px; }
+p { margin: 0 0 6px; }
+ul { margin: 0; padding-left: 18px; }
+li { margin-bottom: 3px; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 3px 5px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: #ccc; }
+
+blockquote {
+  border-left: 2px solid #000;
+  margin: 8px 0;
+  padding-left: 10px;
+  color: #333;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 12px 0;
+}
+
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+  .site-nav { border-right: none; border-bottom: 1px solid #000; }
+}

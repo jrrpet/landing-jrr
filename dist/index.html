@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jrr — Javier Rodríguez Ruiz</title>
+  <meta name="description" content="Javier Rodríguez Ruiz — ingeniero, inventor, usuario Debian. Fundador de PETCiclo. Santiago de Chile.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <h1 style="margin:0; font-size:24px;">jrr.petciclo.cl</h1>
+        <p style="margin:6px 0 0; font-size:15px;">Javier Rodríguez Ruiz — Ingeniero, inventor, Debian.</p>
+      </td>
+      <td align="right" valign="middle" style="font-size:14px; color:#fff;">
+        texto:
+        <a href="#" onclick="setZoom('1'); return false;" style="color:#fff;">[ A ]</a>
+        <a href="#" onclick="setZoom('1.15'); return false;" style="color:#fff;">[ A+ ]</a>
+        <a href="#" onclick="setZoom('1.3'); return false;" style="color:#fff;">[ A++ ]</a>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function setZoom(value) {
+      localStorage.setItem('jrr-zoom', value);
+      document.body.style.zoom = value;
+      ['menu', 'main', 'footer'].forEach(function (name) {
+        const f = window.parent.frames[name];
+        if (f) {
+          f.postMessage({ type: 'zoom', value: value }, '*');
+        }
+      });
+    }
+  </script>
+  </header>
+
+  <nav class="site-nav">
+<h2>menu</h2>
+  <p><a href="home.html" target="main">[ inicio ]</a></p>
+  <p><a href="bio.html" target="main">[ sobre mí ]</a></p>
+  <p><a href="proyectos.html" target="main">[ proyectos ]</a></p>
+  <p><a href="trayectoria.html" target="main">[ trayectoria ]</a></p>
+  <p><a href="contacto.html" target="main">[ contacto ]</a></p>
+
+  <hr style="border:none; border-top:1px solid #000; margin:12px 0;">
+
+  <p style="font-size:11px; color:#333;">
+    externo:<br>
+    <a href="https://petciclo.cl" target="_blank">petciclo.cl</a><br>
+    <a href="https://github.com/jrrpet" target="_blank">github</a>
+  </p>
+
+  </nav>
+
+  <main class="site-main">
+<section id="inicio">
+<h2>inicio</h2>
+  <p>Bienvenido a mi sitio personal.</p>
+  <p>
+    Soy <strong>Javier Rodríguez Ruiz</strong>, ingeniero civil informático,
+    inventor y fundador de <a href="https://petciclo.cl" target="_blank">PETCiclo</a>.
+  </p>
+  <p>
+    Me dedico a cerrar ciclos con tecnología: transformamos residuos PET en
+    filamento de impresión 3D con trazabilidad social.
+  </p>
+  <p>Estoy en Santiago de Chile.</p>
+  <p style="margin-top:12px; font-size:11px; color:#333;">
+    Usa el menú de la izquierda para navegar.
+  </p>
+
+</section>
+<hr>
+<section id="sobre-mí">
+<h2>sobre mí</h2>
+  <p>
+    Apasionado por la tecnología y su integración en soluciones innovadoras,
+    con un espíritu inventor que me impulsa a explorar nuevas fronteras.
+  </p>
+  <p>
+    Ingeniero Civil en Informática con casi dos décadas de experiencia en
+    telecomunicaciones y transformación digital en Chile.
+  </p>
+  <p>
+    Hoy emprendo en <strong>PETCiclo</strong>: acelerar la transición de un
+    modelo lineal a uno circular y sostenible.
+  </p>
+  <blockquote>
+    "Siguiendo el ejemplo de la máquina de coser Singer, PETMachine empodera
+    a las comunidades para participar activamente en la economía circular."
+  </blockquote>
+
+</section>
+<hr>
+<section id="proyectos">
+<h2>proyectos</h2>
+  <table>
+    <tr>
+      <th>proyecto</th>
+      <th>qué es</th>
+    </tr>
+    <tr>
+      <td><a href="https://petciclo.cl" target="_blank">PETCiclo</a></td>
+      <td>Economía circular: filamento rPET con trazabilidad social.</td>
+    </tr>
+    <tr>
+      <td>PETMachine+</td>
+      <td>Maquinaria propia para convertir PET en insumos de impresión 3D.</td>
+    </tr>
+    <tr>
+      <td>Conciencia Antártica</td>
+      <td>Obra impresa en 3D con rPET para el Congreso Nacional / BCN.</td>
+    </tr>
+    <tr>
+      <td>Trazabilidad rPET</td>
+      <td>Sistema en producción: cada bobina lleva un QR con su historia.</td>
+    </tr>
+    <tr>
+      <td>Sistemas internos</td>
+      <td>Gestión JxR, Comercial, RAG-CicloLex, RAG-Adjudica.</td>
+    </tr>
+  </table>
+
+</section>
+<hr>
+<section id="trayectoria">
+<h2>trayectoria</h2>
+  <table>
+    <tr>
+      <th>periodo</th>
+      <th>cargo</th>
+      <th>empresa</th>
+    </tr>
+    <tr><td>2024 — hoy</td><td>Fundador / Director</td><td>PETCiclo</td></tr>
+    <tr><td>2019 — 2024</td><td>Arquitecto de Soluciones</td><td>ENTEL</td></tr>
+    <tr><td>2013 — 2019</td><td>Jefe de Proyectos</td><td>ENTEL</td></tr>
+    <tr><td>2010 — 2013</td><td>Jefe de Proyectos Informáticos</td><td>VTR</td></tr>
+    <tr><td>2006 — 2010</td><td>Analista de Sistemas</td><td>Telsur</td></tr>
+  </table>
+
+  <h3>formación</h3>
+  <ul>
+    <li>Ingeniero Civil en Informática — INACAP (2010)</li>
+    <li>Magíster en Ciencias del Diseño — UAI</li>
+    <li>Diplomado Maker STEAM — UDD</li>
+    <li>5 certificaciones TM Forum (2023)</li>
+  </ul>
+
+</section>
+<hr>
+<section id="contacto">
+<h2>contacto</h2>
+  <table>
+    <tr><td>email</td><td><a href="mailto:javier@petciclo.cl">javier@petciclo.cl</a></td></tr>
+    <tr><td>whatsapp</td><td><a href="https://wa.me/56963402024">+56 9 6340 2024</a></td></tr>
+    <tr><td>github</td><td><a href="https://github.com/jrrpet" target="_blank">github.com/jrrpet</a></td></tr>
+    <tr><td>web</td><td><a href="https://petciclo.cl" target="_blank">petciclo.cl</a></td></tr>
+    <tr><td>ubicación</td><td>Santiago de Chile</td></tr>
+  </table>
+
+</section>
+  </main>
+
+  <footer class="site-footer">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td>jrr.petciclo.cl</td>
+      <td align="right">last updated: 29-07-2026</td>
+    </tr>
+  </table>
+
+  </footer>
+</body>
+</html>
