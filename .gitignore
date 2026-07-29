@@ -1,0 +1,3 @@
+# El excludesFile global (~/.gitignore, modo lista blanca del home) ignora /*
+# Este repo versiona todo su contenido explícitamente:
+!*

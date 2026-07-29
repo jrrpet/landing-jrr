@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javier R. — jrr.petciclo.cl</title>
+  <meta name="description" content="Landing personal de Javier R.: fundador de PETCiclo, economía circular, tecnología y reinserción social. Santiago de Chile.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <span class="nav-brand">jrr</span>
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <!-- TODO: reemplazar "Javier R." por nombre completo si se desea -->
+    <h1>Javier R.</h1>
+    <p class="tagline">Economía circular, tecnología y reinserción social.</p>
+    <p class="subtagline">Fundador de <a href="https://petciclo.cl" target="_blank" rel="noopener">PETCiclo</a> — Santiago de Chile</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+      <a class="btn btn-secondary" href="#contacto">Contacto</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="section">
+      <h2>Sobre mí</h2>
+      <!-- TODO: ajustar bio a gusto -->
+      <p>
+        Desarrollo proyectos donde la tecnología cierra ciclos: transformamos residuos
+        de PET en filamento de impresión 3D con trazabilidad social, producido por
+        personas en proceso de reinserción. Construyo los sistemas que lo hacen
+        posible: trazabilidad, gestión comercial, datos y hardware propio.
+      </p>
+    </section>
+
+    <section id="proyectos" class="section">
+      <h2>Proyectos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>PETCiclo</h3>
+          <p>
+            Economía circular del plástico: filamento rPET con trazabilidad social.
+            Cada bobina de 900 g transforma ~35 botellones en material útil con propósito.
+          </p>
+          <a href="https://petciclo.cl" target="_blank" rel="noopener">petciclo.cl →</a>
+        </article>
+        <article class="card">
+          <h3>Trazabilidad rPET</h3>
+          <p>
+            Sistema de trazabilidad de producción: conoce quién y dónde se produjo
+            cada bobina de filamento reciclado.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Sistemas de gestión</h3>
+          <p>
+            Plataformas internas de gestión comercial, inventario e incidencias
+            que operan el día a día de la organización.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <p>¿Tienes un desafío de economía circular o tecnología con impacto? Hablemos.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:javier@petciclo.cl">javier@petciclo.cl</a></li>
+        <li><a href="https://wa.me/56963402024" target="_blank" rel="noopener">WhatsApp +56 9 6340 2024</a></li>
+        <li><a href="https://github.com/jrrpet" target="_blank" rel="noopener">github.com/jrrpet</a></li>
+        <!-- TODO: agregar LinkedIn -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Javier R. — jrr.petciclo.cl</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
