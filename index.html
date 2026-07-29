@@ -6,6 +6,10 @@
   <title>jrr.petciclo.cl</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -13,53 +17,81 @@
       background: #333;
       font-family: "Courier New", Courier, monospace;
     }
+
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      place-items: center;
+      padding: 2vh 2vw;
     }
+
     .monitor {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      grid-template-rows: 96px 1fr 30px;
+      grid-template-areas:
+        "top top"
+        "menu main"
+        "footer footer";
       width: 96vw;
       max-width: 1280px;
       height: 96vh;
       background: #000;
       border: 28px solid #222;
       border-radius: 4px;
-      box-shadow: 0 0 0 6px #111, 0 0 40px rgba(0,0,0,0.6);
+      box-shadow: 0 0 0 6px #111, 0 0 40px rgba(0, 0, 0, 0.6);
       overflow: hidden;
     }
-    .screen {
+
+    .monitor > * {
+      overflow: hidden;
+    }
+
+    .monitor__top {
+      grid-area: top;
+      background: #000;
+    }
+
+    .monitor__menu {
+      grid-area: menu;
+      background: #fff;
+      border-right: 1px solid #000;
+    }
+
+    .monitor__main {
+      grid-area: main;
+      background: #fff;
+    }
+
+    .monitor__footer {
+      grid-area: footer;
+      background: #ccc;
+      border-top: 1px solid #000;
+    }
+
+    iframe {
       width: 100%;
       height: 100%;
-      border-collapse: collapse;
-      background: #fff;
+      border: 0;
+      display: block;
     }
   </style>
 </head>
 <body>
 
-<div class="monitor">
-  <table class="screen" border="1" cellspacing="0" cellpadding="0">
-    <tr>
-      <td colspan="2" height="96">
-        <iframe src="top.html" name="top" width="100%" height="100%" frameborder="0"></iframe>
-      </td>
-    </tr>
-    <tr>
-      <td width="190">
-        <iframe src="menu.html" name="menu" width="100%" height="100%" frameborder="0"></iframe>
-      </td>
-      <td>
-        <iframe src="home.html" name="main" width="100%" height="100%" frameborder="0"></iframe>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" height="30">
-        <iframe src="footer.html" name="footer" width="100%" height="100%" frameborder="0"></iframe>
-      </td>
-    </tr>
-  </table>
-</div>
+  <div class="monitor">
+    <header class="monitor__top">
+      <iframe src="top.html" name="top" title="cabecera"></iframe>
+    </header>
+    <nav class="monitor__menu">
+      <iframe src="menu.html" name="menu" title="menú de navegación"></iframe>
+    </nav>
+    <main class="monitor__main">
+      <iframe src="home.html" name="main" title="contenido principal"></iframe>
+    </main>
+    <footer class="monitor__footer">
+      <iframe src="footer.html" name="footer" title="pie de página"></iframe>
+    </footer>
+  </div>
 
 </body>
 </html>
